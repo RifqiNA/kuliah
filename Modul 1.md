@@ -250,15 +250,22 @@ curl -i http://vm.local/
 curl -i http://vm.local/app
 curl -i http://vm.local/blog
 ```
-**http://vm.local/**
+
+```
+http://vm.local/
+```
 
 ![vmlocal1](https://user-images.githubusercontent.com/93064971/138595649-d1e735b6-d4fa-4565-b06a-b48ca3e3ce6f.png)
 
-**http://vm.local/app**
+```
+http://vm.local/app
+```
 
 ![vmapp1](https://user-images.githubusercontent.com/93064971/138595661-1c5b5737-f8e9-4e92-9a93-1f93aaa9d734.png)
 
-**http://vm.local/blog**
+```
+http://vm.local/blog
+```
 
 ![vmblog1](https://user-images.githubusercontent.com/93064971/138595673-43210a57-d4ed-4055-bc98-e236dcfe0ba5.png)
 
@@ -266,22 +273,15 @@ curl -i http://vm.local/blog
 
 ## 7. for their presentation needs, the browser on their laptop must be able to access all three urls.
 
-```
 **http://vm.local/**
-```
 
 ![vmlocal](https://user-images.githubusercontent.com/93064971/138595760-fe1ae5f7-6ba6-4bf4-ae5f-b5fde3e671c2.png)
 
-```
-**http://vm.local/app**
-```
+http://vm.local/app
 
 ![vmapp](https://user-images.githubusercontent.com/93064971/138595788-e2a20e0a-fe47-4b59-8b85-43025317dd17.png)
 
-
-```
-**http://vm.local/blog**
-```
+http://vm.local/blog
 
 ![vmblog](https://user-images.githubusercontent.com/93064971/138595813-25202aec-688b-446a-831f-d6bc614da40f.png)
 
