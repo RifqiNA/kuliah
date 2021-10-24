@@ -1,6 +1,6 @@
 # Praktikum Modul 1
 ## Group 12 [IT02-01]
-**Rifqi Naufal A 1202190012 || Andi Tadang P 1202190046
+**Rifqi Naufal A 1202190012 || Andi Tadang P 1202190046**
 <hr> 
 ### 1. Rename ubuntu_php5.6 to ubuntu_landing, and change the IP according to the new scheme
 - turn off ubuntu_php5.6
