@@ -137,3 +137,10 @@ if you can't use **nano index.html** use this instead
 nano lxc_php5.6/index.html
 ```
 ![10](https://user-images.githubusercontent.com/93064971/138592349-cec3daf6-8831-4980-9486-dcd8e088a921.png)
+
+```bash
+curl -i http://lxc_landing.dev
+```
+
+<hr> 
+
