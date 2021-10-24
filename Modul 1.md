@@ -53,4 +53,9 @@ ifconfig
 
 ![4](https://user-images.githubusercontent.com/93064971/138588755-02a50a8b-2dec-45da-b14f-a8b081974e7a.png)
 
+- setting nginx
+```bash
+cd /etc/nginx/sites-available
+nano lxc_php5.6.dev 
+```
 
