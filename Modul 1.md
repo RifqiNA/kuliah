@@ -59,3 +59,24 @@ cd /etc/nginx/sites-available
 nano lxc_php5.6.dev 
 ```
 
+![5](https://user-images.githubusercontent.com/93064971/138588969-925eb9b3-c6e5-4fc1-b8c4-2b2c3c838d8b.png)
+
+```bash
+cd ../sites-enabled
+ln -s /etc/nginx/sites-available/lxc_php5.6.dev .
+nginx -t
+nginx -s reload
+nano /etc/hosts
+```
+![6](https://user-images.githubusercontent.com/93064971/138589068-bc755852-1848-4ec6-b885-10e66432416e.png)
+
+**changed like the picture above**
+
+```bash
+cd /var/www/html
+nano index.html
+```
+if you can't use **nano index.html** use this instead
+```bash
+nano lxc_php5.6/index.html
+```
