@@ -1,16 +1,33 @@
 # Praktikum Modul 1
 ## Group 12 [IT02-01]
 **Rifqi Naufal A 1202190012 || Andi Tadang P 1202190046**
+
 <hr> 
+
+### Scheme
+
+Virtual Box Ubuntu Server IP : 192.168.0.100
+
+LXC Debian Server 9 php5.6 IP : 10.0.3.102
+
+LXC Ubuntu Server 18.04 php7.4 IP : 10.0.3.101
+
+LXC Ubuntu Server 16.04 IP : 10.0.3.103
+
+<hr>
+
 ### 1. Rename ubuntu_php5.6 to ubuntu_landing, and change the IP according to the new scheme
+
 - turn off ubuntu_php5.6
 ```bash
 sudo lxc-stop -n ubuntu_php5.6
 ```
+
 - Rename
 ```bash
 sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 ```
+
 - static IP settings for ubuntu_landing
 
 ![1](https://user-images.githubusercontent.com/93064971/138588070-75ae938c-fcbd-4e58-aa1f-fd2c72657074.png)
