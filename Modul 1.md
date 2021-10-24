@@ -74,9 +74,16 @@ nano /etc/hosts
 
 ```bash
 cd /var/www/html
+mkdir lxc_php5.6
+cp index.nginx-debian.html lxc_php5.6/index.html
 nano index.html
 ```
 if you can't use **nano index.html** use this instead
 ```bash
 nano lxc_php5.6/index.html
 ```
+
+![7](https://user-images.githubusercontent.com/93064971/138589296-409121e2-6e2b-410a-9456-c026214d2ada.png)
+
+**changed like the picture above**
+
