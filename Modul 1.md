@@ -10,6 +10,7 @@ sudo lxc-stop -n ubuntu_php5.6
 sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 ```
 - setting ip
+
 ![1](https://user-images.githubusercontent.com/93064971/138588070-75ae938c-fcbd-4e58-aa1f-fd2c72657074.png)
 2. Install lxc debian 9 dengan nama debian_php5.6
 ```bash
