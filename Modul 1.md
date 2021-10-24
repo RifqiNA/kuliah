@@ -23,10 +23,14 @@ systemctl restart networking.service
 
 ![2](https://user-images.githubusercontent.com/93064971/138588410-58e4621f-d776-48c6-a398-e9d612fd5362.png)
 
+<hr> 
+
 ### 2. Install lxc debian 9 by the name debian_php5.6
 ```bash
 sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
 ```
+
+<hr> 
 
 ### 3. setup nginx on debian_php5.6 for the http://lxc_php5.dev domain, create an index.html page that describes the lxc name information
 - start debian_php5.6 & launch it
@@ -92,6 +96,8 @@ nano lxc_php5.6/index.html
 curl -i http://lxc_php5.dev
 ```
 
+<hr> 
+
 ### 4. setup nginx on ubuntu_landing for the http://lxc_landing.dev domain, create an index.html page that describes the lxc name information
 
 - start ubuntu_landing & launch it
@@ -101,3 +107,33 @@ sudo lxc-attach -n ubuntu_landing
 ```
 -setting nginx
 
+```bash
+cd /etc/nginx/sites-available
+nano lxc_php5.6.dev 
+```
+
+![8](https://user-images.githubusercontent.com/93064971/138592080-0978a4c0-c34a-4313-adff-a8b4d3d52c2e.png)
+
+```bash
+cd ../sites-enabled
+ln -s /etc/nginx/sites-available/lxc_php5.6.dev .
+nginx -t
+nginx -s reload
+nano /etc/hosts
+```
+
+![9](https://user-images.githubusercontent.com/93064971/138592138-5e3f3963-ff19-4b20-a97d-563134c51c41.png)
+
+**changed like the picture above**
+
+```bash
+cd /var/www/html
+mkdir lxc_php5.6
+cp index.nginx-debian.html lxc_php5.6/index.html
+nano index.html
+```
+if you can't use **nano index.html** use this instead
+```bash
+nano lxc_php5.6/index.html
+```
+![10](https://user-images.githubusercontent.com/93064971/138592349-cec3daf6-8831-4980-9486-dcd8e088a921.png)
