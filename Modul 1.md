@@ -27,7 +27,7 @@ sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch 
 ```
 
 ### 3. setup nginx on debian_php5.6 for the http://lxc_php5.dev domain, create an index.html page that describes the lxc name information
-- start debian_php5.6 & lauch it
+- start debian_php5.6 & launch it
 ```bash
 sudo lxc-start -n debian_php5.6
 sudo lxc-attach -n debian_php5.6
@@ -86,4 +86,15 @@ nano lxc_php5.6/index.html
 ![7](https://user-images.githubusercontent.com/93064971/138589296-409121e2-6e2b-410a-9456-c026214d2ada.png)
 
 **changed like the picture above**
+```bash
+curl -i http://lxc_php5.dev
+```
 
+### 4. setup nginx on ubuntu_landing for the http://lxc_landing.dev domain, create an index.html page that describes the lxc name information
+
+- start ubuntu_landing & launch it
+```bash
+sudo lxc-start -n ubuntu_landing
+sudo lxc-attach -n ubuntu_landing
+```
+-setting nginx
