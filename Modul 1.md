@@ -161,3 +161,54 @@ curl -i http://lxc_landing.dev
 
 <hr> 
 
+5. LXC ubuntu_landing should auto start when the vm is started, this is used to keep the company profile website from experiencing downtime
+
+- stop ubuntu_landing then check if it actually stop
+
+```bash
+sudo lxc-stop -n ubuntu_landing
+sudo lxc-ls -f
+```
+
+![11](https://user-images.githubusercontent.com/93064971/138592610-a6c3e444-e54b-4c36-bd33-4e6634cdcd09.png)
+
+- Go to the /var/lib/lxc directory and check if there are any directories
+ 
+```bash
+sudo su
+cd /var/lib/lxc/ubuntu_landing
+nano config
+```
+
+![13](https://user-images.githubusercontent.com/93064971/138592840-c433ac0a-c591-4fdd-8b9f-0ae376fa5ee1.png)
+
+Add
+```bash
+lxc.start.auto = 1
+```
+
+![14](https://user-images.githubusercontent.com/93064971/138592880-06575291-2296-45a2-b78a-e8619dfa123a.png)
+
+Check auto start by rebooting first
+
+Exit the super user, then reboot it
+
+```bash
+reboot
+```
+
+Then check is the ubuntu_landing autostart has been running or not. If the autostart has been running, the 'AUTOSTART' will change from '0' to '1'.
+
+```bash
+sudo lxc-ls -f
+```
+
+![15](https://user-images.githubusercontent.com/93064971/138592986-7656ec9c-857e-47a1-aadc-84c5b4fdd2bc.png)
+
+<hr>
+
+5. setup nginx on vm.local to set proxy_pass where :
+- accessing http://vm.local will be redirected to http://lxc_landing.dev
+- accessing http://vm.local/blog will be redirected to http://lxc_php7.dev
+- accessing http://vm.local/app will be redirected to http://lxc_php5.dev
+
