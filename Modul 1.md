@@ -161,7 +161,7 @@ curl -i http://lxc_landing.dev
 
 <hr> 
 
-5. LXC ubuntu_landing should auto start when the vm is started, this is used to keep the company profile website from experiencing downtime
+### 5. LXC ubuntu_landing should auto start when the vm is started, this is used to keep the company profile website from experiencing downtime
 
 - stop ubuntu_landing then check if it actually stop
 
@@ -207,8 +207,30 @@ sudo lxc-ls -f
 
 <hr>
 
-5. setup nginx on vm.local to set proxy_pass where :
+### 6. setup nginx on vm.local to set proxy_pass where :
 - accessing http://vm.local will be redirected to http://lxc_landing.dev
 - accessing http://vm.local/blog will be redirected to http://lxc_php7.dev
 - accessing http://vm.local/app will be redirected to http://lxc_php5.dev
 
+**using super user**
+
+```bash
+sudo nano /etc/hosts
+```
+
+![16](https://user-images.githubusercontent.com/93064971/138594732-9896d2db-88a6-4e55-9bd5-e0707c400b12.png)
+
+After that we need to install nginx, then enter the directory of sites available, then enter the nano of vm.local
+
+```bash
+sudo apt install nginx nginx-extras
+cd /etc/nginx/sites-available
+sudo touch vm.local
+sudo nano vm.local
+```
+
+Edit the nano vm.local
+
+![17](https://user-images.githubusercontent.com/93064971/138594827-076afbc2-2505-45b3-a1b7-a23f8449faf2.png)
+
+Then enter the directory of sites enabled, If nginx fails to start, run `sudo nginx -t` to find if there is anything wrong with your configuration file.  `sudo nginx -s reload` keeps the nginx server running as it reloads updated configuration files. If nginx notices a syntax error in any of the configuration files, the reload is aborted and the server keeps running based on old config files.
