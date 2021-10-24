@@ -21,7 +21,14 @@ systemctl restart networking.service
 
 ![2](https://user-images.githubusercontent.com/93064971/138588410-58e4621f-d776-48c6-a398-e9d612fd5362.png)
 
-### 2. Install lxc debian 9 dengan nama debian_php5.6
+### 2. Install lxc debian 9 by the name debian_php5.6
 ```bash
 sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
+```
+
+### 3. setup nginx on debian_php5.6 for the http://lxc_php5.dev domain, create an index.html page that describes the lxc name information
+- start debian_php5.6 & lauch it
+```bash
+sudo lxc-start -n debian_php5.6
+sudo lxc-attach -n debian_php5.6
 ```
