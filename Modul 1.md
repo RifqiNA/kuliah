@@ -1,4 +1,5 @@
-# Praktikum 1
-#### Kelompok 12
+# Praktikum 1 Kelompok 12
+1. Rename ubuntu_php5.6 menjadi ubuntu_landing, serta rubah IP mengikuti skema yang baru
 
-<img src="![vmlocal](https://user-images.githubusercontent.com/93064971/138582380-e0961dd5-f915-4474-bfe6-2123679549c1.PNG)" style="width:50%"/>
+2. Install lxc debian 9 dengan nama debian_php5.6
+
