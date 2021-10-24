@@ -9,7 +9,7 @@ sudo lxc-stop -n ubuntu_php5.6
 ```bash
 sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 ```
-- static IP settings
+- static IP settings for ubuntu_landing
 
 ![1](https://user-images.githubusercontent.com/93064971/138588070-75ae938c-fcbd-4e58-aa1f-fd2c72657074.png)
 
@@ -32,3 +32,25 @@ sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch 
 sudo lxc-start -n debian_php5.6
 sudo lxc-attach -n debian_php5.6
 ```
+- install nano & nginx
+```bash
+sudo apt install nginx nginx-extras
+apt install nano net-tools curl
+```
+
+- static IP settings for debian_php5.6
+```bash
+nano /etc/network/interfaces
+````
+![3](https://user-images.githubusercontent.com/93064971/138588679-de9f5b52-9f90-4469-84e4-b0a8f60697bc.png)
+
+**changed like the picture above**
+
+```bash
+systemctl restart networking.service
+ifconfig
+```
+
+![4](https://user-images.githubusercontent.com/93064971/138588755-02a50a8b-2dec-45da-b14f-a8b081974e7a.png)
+
+
